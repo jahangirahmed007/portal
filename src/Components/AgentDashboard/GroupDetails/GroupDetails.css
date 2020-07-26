@@ -1,0 +1,14 @@
+.allContent {
+    background: #f6f6f6;
+    height: auto;
+  }
+  .booking {
+    text-decoration: underline;
+    color: blue;
+  }
+  .inputHolders {
+    border: 1px solid black;
+  }
+  .adultText {
+    color: blue;
+  }

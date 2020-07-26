@@ -1,0 +1,22 @@
+.allContent {
+    background: #f6f6f6;
+    height: auto;
+  }
+  .mainHead {
+    text-decoration: underline;
+  }
+  .common {
+    border: 2px solid;
+  }
+  .countingSidbar {
+    width: 50px !important;
+  }
+  .tourType {
+    color: blue !important;
+  }
+  .common2 {
+    border-left: none;
+  }
+  .contact {
+    border: 3px solid lightblue;
+  }
