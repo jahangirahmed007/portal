@@ -8,7 +8,7 @@ const routes = require("./Routes/routes");
 const app = express();
 const path = require("path");
 const passport = require("passport");
-require("./Passport/JWT-Strategy")(passport);
+require("./Passport/JWTStrategy")(passport);
 Middleware();
 app.use(express.json());
 app.use(cors());
