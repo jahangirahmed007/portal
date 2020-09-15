@@ -11,6 +11,7 @@ import GroupDetails from "./Components/AgentDashboard/GroupDetails/GroupDetails"
 import CreateGroup from "./Components/AgentDashboard/CreateGroup";
 import Groups from "./Components/AgentDashboard/Groups";
 import PasswordChange from "./Components/PasswordChange/PasswordChange";
+import ChangePassword from "./Components/AgentDashboard/ChangePassword/ChangePassword";
 // import AdminDashSideBar from './Components/AdminDashSideBar/AdminDashSideBar';
 // import GroupUplaod from './Components/GroupUplaod/GroupUplaod';
 const Header = React.lazy(() => import("./Components/Header/Header"));

@@ -1,8 +1,8 @@
 import axios from "axios";
 import setAuthToken from "../services/SetAuthToken";
-
+import url from "../constants/constants";
 export const loginUser = (user, history) => (dispatch) => {
-  axios.post("/portal-fare/login", user).then((res) => {
+  axios.post(`${url}/portal-fare/login`, user).then((res) => {
     const { token } = res.data;
     localStorage.setItem("jwtToken", token);
     setAuthToken(token);
@@ -11,7 +11,7 @@ export const loginUser = (user, history) => (dispatch) => {
 };
 
 export const getCurrentUser = () => (dispatch) => {
-  axios.get("/portal-fare/user").then((res) => {
+  axios.get(`${url}/portal-fare/user`).then((res) => {
     dispatch({
       type: "SET_CURRENT_USER",
       payload: res.data,
@@ -29,7 +29,7 @@ export const logOut = (history) => (dispatch) => {
 };
 export const RegisterAgent = (data) => (dispatch) => {
   axios
-    .post("/portal-fare/agent/register", data)
+    .post(`${url}/portal-fare/agent/register`, data)
     .then((res) => console.log(res.data));
   // .catch(err => {
   //     dispatch({
@@ -41,7 +41,7 @@ export const RegisterAgent = (data) => (dispatch) => {
 
 export const RegisterUser = (data) => (dispatch) => {
   axios
-    .post("/portal-fare/user/register", data)
+    .post(`${url}/portal-fare/user/register`, data)
     .then((res) => console.log("Created succwssfully"));
   // .catch(err => {
   //     dispatch({

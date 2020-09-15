@@ -28,10 +28,11 @@
     "validator": "^11.1.0"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
