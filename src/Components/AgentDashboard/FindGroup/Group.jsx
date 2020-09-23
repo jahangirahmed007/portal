@@ -45,12 +45,15 @@ export default class Group extends Component {
                     </label>
                     <div className="row">
                       <div className="col-4">
+                        <label htmlFor="exampleInputEmail1">Adult</label>
                         <input type="number" name="" id="" className="w-100" />
                       </div>
                       <div className="col-4">
+                        <label htmlFor="exampleInputEmail1"> Child</label>
                         <input type="number" name="" id="" className="w-100" />
                       </div>
                       <div className="col-4">
+                        <label htmlFor="exampleInputEmail1">Infant</label>
                         <input type="number" name="" id="" className="w-100" />
                       </div>
                     </div>

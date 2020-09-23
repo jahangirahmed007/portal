@@ -35,25 +35,7 @@ class AgentNavbar extends Component {
                 LOGOUT
               </button>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                href="/agentdash/"
-                aria-expanded="false"
-              >
-                DASHBOARD
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link to="/agentdash/" className="dropdown-item">
-                  HOME
-                </Link>
-                <div className="dropdown-divider" />
-              </div>
-            </li>
+
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -63,7 +45,7 @@ class AgentNavbar extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                UPLOAD/FIND GROUPS
+                UPLOAD/FIND TICKET
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <Link to="/agentdash/creategroup" className="dropdown-item">
@@ -73,6 +55,11 @@ class AgentNavbar extends Component {
                 <Link to="/agentdash/find" className="dropdown-item">
                   FIND GROUP
                 </Link>
+                <div className="dropdown-divider" />
+
+                <Link to="/agentdash/allTickets" className="dropdown-item">
+                  View All Tickets
+                </Link>
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -84,51 +71,19 @@ class AgentNavbar extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                MY GROUPS
+                MY TICKETS
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item">UPLOADED GROUPS</Link>
+                <Link to="/agentdash/uploaded" className="dropdown-item">
+                  UPLOADED TICKETS
+                </Link>
                 <div className="dropdown-divider" />
                 <Link to="/agentdash/donedeals" className="dropdown-item">
                   Done Deals
                 </Link>
                 <div className="dropdown-divider" />
-                <Link className="dropdown-item">INTERESTED GROUPS</Link>
-              </div>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                DEMAND
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item">CREATE DEMAND</Link>
-                <div className="dropdown-divider" />
-                <Link className="dropdown-item">VIEW MY DEMANDS</Link>
-              </div>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                ACCOUNTS
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item">DEALS HISTORY</Link>
-                <div className="dropdown-divider" />
-                <Link to="/agentdash/subscriptions" className="dropdown-item">
-                  MY SUBSCRIPTIONS
+                <Link to="/agentdash/whishlist" className="dropdown-item">
+                  INTERESTED GROUPS
                 </Link>
               </div>
             </li>
@@ -141,12 +96,48 @@ class AgentNavbar extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                CONTACT SUPPORT
+                DEMANDS
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item">ABOUT US</Link>
+                <Link to="/agentdash/createdemand" className="dropdown-item">
+                  CREATE DEMAND
+                </Link>
                 <div className="dropdown-divider" />
-                <Link className="dropdown-item">CONTACTS</Link>
+                <Link to="/agentdash/mydemands" className="dropdown-item">
+                  MY DEMANDS
+                </Link>
+                <div className="dropdown-divider" />
+                <Link to="/agentdash/otherdemands" className="dropdown-item">
+                  VIEW DEMANDS
+                </Link>
+              </div>
+            </li>
+
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                REQUIRED NAMES
+              </Link>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <Link to="/agentdash/uplaodnames" className="dropdown-item">
+                  {" "}
+                  UPLAOD NAMES
+                </Link>
+                <div className="dropdown-divider" />
+                <Link to="/agentdash/allnames" className="dropdown-item">
+                  VIEW ALL NAMES
+                </Link>
+                <div className="dropdown-divider" />
+
+                <Link to="/agentdash/mynames" className="dropdown-item">
+                  MY NAMES
+                </Link>
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -167,6 +158,13 @@ class AgentNavbar extends Component {
                 <div className="dropdown-divider" />
                 <Link to="/agentdash/myprofile" className="dropdown-item">
                   EDIT MY PROFILE
+                </Link>
+                <div className="dropdown-divider" />
+
+                <Link className="dropdown-item">DEALS HISTORY</Link>
+                <div className="dropdown-divider" />
+                <Link to="/agentdash/subscriptions" className="dropdown-item">
+                  MY SUBSCRIPTIONS
                 </Link>
               </div>
             </li>
