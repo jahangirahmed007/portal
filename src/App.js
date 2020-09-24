@@ -24,9 +24,9 @@ const DashBoard = React.lazy(() => import("./Components/DashBoard/DashBoard"));
 const AgentDashboard = React.lazy(() =>
   import("./Components/AgentDashboard/AgentDashboard")
 );
-const UserRegister = React.lazy(() =>
-  import("./Components/UserRegister/UserRegister")
-);
+// const UserRegister = React.lazy(() =>
+//   import("./Components/UserRegister/UserRegister")
+// );
 // import AgentRegister from './Components/AgentRegister/AgentRegister';
 // import CreateGroup from './Components/AgentDashboard/CreateGroup';
 // import CreateTicket from './Components/AgentDashboard/CreateTicket';
@@ -42,7 +42,7 @@ function App() {
           <Route path="/agentdash" component={AgentDashboard} />
           <Route path="/admindash" component={DashBoard} />
           <Route path="/Login" component={LoginAdmin} />{" "}
-          <Route path="/userregister" component={UserRegister} />
+          {/* <Route path="/userregister" component={UserRegister} /> */}
         </Switch>
       </Suspense>
     </div>
