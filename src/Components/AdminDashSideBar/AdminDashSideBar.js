@@ -30,12 +30,66 @@ class AdminDashSideBar extends Component {
             style={{ height: "100vh" }}
             id="accordionExample"
           >
-            <ul style={{ listStyle: "none", marginLeft: "-15px" }}>
-              <li>
+            <ul
+              className=" "
+              style={{
+                listStyle: "none",
+                marginLeft: "-15px",
+                width: "100%",
+              }}
+            >
+              <li className="mb-4">
                 <div className=" mb-2 ">
-                  <h2 className="mb-2  h3">
+                  <h2 className="mb-2  h5">
                     <button
-                      className="container text-white border-top border-left border-right  border-bottom "
+                      className="container text-white   border-bottom "
+                      style={{
+                        backgroundColor: "transparent",
+                        border: "none",
+                        outline: "none",
+                      }}
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseadd"
+                      aria-expanded="true"
+                      aria-controls="collapseadd"
+                    >
+                      ADMIN
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseadd"
+                    className="collapse  "
+                    aria-labelledby="headingadd"
+                    data-parent="#accordionExample"
+                  >
+                    <ul className="" style={{ listStyle: "none" }}>
+                      <li className="">
+                        <Link
+                          className="text-white mb-2"
+                          to="/admindash/alldeals"
+                        >
+                          VEIW ALL DEALS
+                        </Link>{" "}
+                      </li>
+                      <li>
+                        <Link
+                          className="text-white mb-2"
+                          to="/admindash/changepassword"
+                        >
+                          CHANGE MY PASSWORD
+                        </Link>{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li className="mb-4">
+                <div className=" mb-2 ">
+                  <h2 className="mb-2  h5">
+                    <button
+                      className="container text-white   border-bottom "
                       style={{
                         backgroundColor: "transparent",
                         border: "none",
@@ -66,161 +120,96 @@ class AdminDashSideBar extends Component {
                           CREATE A NEW USER
                         </Link>{" "}
                       </li>
-                      <li className="text-white mb-2">VIEW/EDIT ALL USERS</li>
-                      <li className="text-white mb-2">VIEW ACTIONS OF USERS</li>
+                      <li>
+                        {" "}
+                        <Link
+                          className="text-white mb-2"
+                          to="/admindash/viewusers"
+                        >
+                          VIEW/EDIT ALL USERS{" "}
+                        </Link>{" "}
+                      </li>
+                      <li>
+                        <Link
+                          className="text-white mb-2"
+                          to="/admindash/actions"
+                        >
+                          VIEW ACTIONS OF USERS
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </li>
-              <li>
+              <li className="mb-4">
                 <div className="">
-                  <h2 className="mb-2 mt-1 h3 ">
+                  <h2 className="mb-2 mt-1 h5 ">
                     <button
-                      className="container text-white border-top  border-bottom "
+                      className="container text-white   border-bottom "
                       style={{
                         backgroundColor: "transparent",
                         border: "none",
                         outline: "none",
                       }}
                       type="button"
-                      //   data-toggle="collapse"
-                      //   data-target="#collapseTwo"
-                      //   aria-expanded="false"
-                      //   aria-controls="collapseTwo"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
                     >
                       AGENTS
                     </button>
                   </h2>
 
-                  {/* <div
+                  <div
                     id="collapseTwo"
                     className="collapse"
                     aria-labelledby="headingTwo"
                     data-parent="#accordionExample"
-                  > */}
-                  {/* <div className="border-top"> */}
-                  <ul className="" style={{ listStyle: "none" }}>
-                    <li className="">
-                      <Link
-                        className="text-white mb-2"
-                        to="/admindash/createagent"
-                      >
-                        CREATE AGENTS
-                      </Link>{" "}
-                    </li>
-                    {/* <li className="text-white mb-2">CREATE AGENTS</li> */}
-                    <li className="text-white mb-2">VIEW ALL AGENTS</li>
-                    <li className="text-white mb-2">AGRNTS SUBSCRIPTIONS</li>
-                    {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
+                  >
+                    <div className="">
+                      <ul className="" style={{ listStyle: "none" }}>
+                        <li className="">
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/createagent"
+                          >
+                            CREATE AGENTS
+                          </Link>{" "}
+                        </li>
+                        {/* <li className="text-white mb-2">CREATE AGENTS</li> */}
+                        <li>
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/allagents"
+                          >
+                            {" "}
+                            VIEW ALL AGENTS
+                          </Link>{" "}
+                        </li>
+                        <li>
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/agentssubs"
+                          >
+                            {" "}
+                            AGENTS SUBSCRIPTIONS
+                          </Link>
+                        </li>
+                        {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
                     <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>
                     <li className="text-white mb-2">VIEW DEMANDS</li>
                     <li className="text-white mb-2">VIEW AGENTS</li> */}
-                  </ul>
-                  {/* </div> */}
-                  {/* </div> */}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li>
+              <li className="mb-4">
                 <div className="">
-                  <h2 className="mb-2 mt-1 h3 ">
+                  <h2 className="mb-2 mt-1 h5 ">
                     <button
-                      className="container text-white border-top  border-bottom "
-                      style={{
-                        backgroundColor: "transparent",
-                        border: "none",
-                        outline: "none",
-                      }}
-                      type="button"
-                      //   data-toggle="collapse"
-                      //   data-target="#collapseTwo"
-                      //   aria-expanded="false"
-                      //   aria-controls="collapseTwo"
-                    >
-                      ACTIONS
-                    </button>
-                  </h2>
-
-                  {/* <div
-                    id="collapseTwo"
-                    className="collapse"
-                    aria-labelledby="headingTwo"
-                    data-parent="#accordionExample"
-                  > */}
-                  {/* <div className="border-top"> */}
-                  <ul className="" style={{ listStyle: "none" }}>
-                    <li className="">
-                      <Link
-                        className="text-white mb-2"
-                        // to="/admindash/createagent"
-                      >
-                        GROUP/TICKETS
-                      </Link>{" "}
-                    </li>
-                    <li className="text-white mb-2">DEMANDS</li>
-                    <li className="text-white mb-2">REQUIRE NAMES</li>
-                    {/* <li className="text-white mb-2">AGRNTS SUBSCRIPTIONS</li> */}
-                    {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
-                    <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>
-                    <li className="text-white mb-2">VIEW DEMANDS</li>
-                    <li className="text-white mb-2">VIEW AGENTS</li> */}
-                  </ul>
-                  {/* </div> */}
-                  {/* </div> */}
-                </div>
-              </li>{" "}
-              <li>
-                <div className="">
-                  <h2 className="mb-2 mt-1 h3 ">
-                    <button
-                      className="container text-white  border-bottom "
-                      style={{
-                        backgroundColor: "transparent",
-                        border: "none",
-                        outline: "none",
-                      }}
-                      type="button"
-                      //   data-toggle="collapse"
-                      //   data-target="#collapseTwo"
-                      //   aria-expanded="false"
-                      //   aria-controls="collapseTwo"
-                    >
-                      AGENTS
-                    </button>
-                  </h2>
-
-                  {/* <div
-                    id="collapseTwo"
-                    className="collapse"
-                    aria-labelledby="headingTwo"
-                    data-parent="#accordionExample"
-                  > */}
-                  {/* <div className="border-top"> */}
-                  <ul className="" style={{ listStyle: "none" }}>
-                    <li className="">
-                      <Link
-                        className="text-white mb-2"
-                        to="/admindash/createagent"
-                      >
-                        CREATE AN AGENT
-                      </Link>{" "}
-                    </li>
-                    <li className="text-white mb-2">CREATE AGENTS</li>
-                    <li className="text-white mb-2">VIEW ALL AGENTS</li>
-                    <li className="text-white mb-2">AGRNTS SUBSCRIPTIONS</li>
-                    {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
-                    <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>
-                    <li className="text-white mb-2">VIEW DEMANDS</li>
-                    <li className="text-white mb-2">VIEW AGENTS</li> */}
-                  </ul>
-                  {/* </div> */}
-                  {/* </div> */}
-                </div>
-              </li>
-              <li>
-                <div className=" border-bottom">
-                  <h2 className="mb-2 mt-5 h3">
-                    <button
-                      className="container text-white "
+                      className="container text-white   border-bottom "
                       style={{
                         backgroundColor: "transparent",
                         border: "none",
@@ -232,28 +221,92 @@ class AdminDashSideBar extends Component {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      OTHERS
+                      ACTIONS
                     </button>
                   </h2>
 
                   <div
                     id="collapseThree"
                     className="collapse"
-                    aria-labelledby="headingThree"
+                    aria-labelledby="headingTwo"
                     data-parent="#accordionExample"
                   >
-                    {/* <div className="border-top"> */}
-                    <ul className="" style={{ listStyle: "none" }}>
-                      <li className="text-white mb-2">FIND A GROUP</li>
-                    </ul>
-                    {/* </div> */}
+                    <div className="">
+                      <ul className="" style={{ listStyle: "none" }}>
+                        <li className="">
+                          <Link
+                            className="text-white mb-2"
+                            // to="/admindash/createagent"
+                          >
+                            GROUP/TICKETS
+                          </Link>{" "}
+                        </li>
+                        <li className="text-white mb-2">DEMANDS</li>
+                        <li className="text-white mb-2">REQUIRE NAMES</li>
+                        {/* <li className="text-white mb-2">AGRNTS SUBSCRIPTIONS</li> */}
+                        {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
+                    <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>
+                    <li className="text-white mb-2">VIEW DEMANDS</li>
+                    <li className="text-white mb-2">VIEW AGENTS</li> */}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>{" "}
+              <li className="mb-4">
+                <div className="">
+                  <h2 className="mb-2 mt-1 h5 ">
+                    <button
+                      className="container text-white   border-bottom"
+                      style={{
+                        backgroundColor: "transparent",
+                        border: "none",
+                        outline: "none",
+                      }}
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      ADD/EDIT CONTENTS
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseFour"
+                    className="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordionExample"
+                  >
+                    <div className="">
+                      <ul className="" style={{ listStyle: "none" }}>
+                        <li className="">
+                          <Link
+                            className="text-white mb-2"
+                            // to="/admindash/createagent"
+                          >
+                            UPLOAD TICKETS
+                          </Link>{" "}
+                        </li>
+                        <li className="text-white mb-2">FIND TICKETS</li>
+                        <li className="text-white mb-2">CREATE DEMANED</li>
+                        <li className="text-white mb-2">UPLOAD GROUPS</li>
+                        <li className="text-white mb-2">FIND GROUPS</li>
+                        <li className="text-white mb-2">REQUIRED NAME</li>
+                        <li className="text-white mb-2">
+                          AGENTS CREATION FORM{" "}
+                        </li>
+                        <li className="text-white mb-2">USERS CREATION FROM</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </li>
-              <li className="d-flex justify-content-center mt-3 ">
+              <li className="d-flex justify-content-center mt-3  ">
                 {" "}
                 <button
-                  className=" btn btn-link text-white mb-2"
+                  className=" btn btn-link text-white mb-2 border-bottom"
                   onClick={this.onLogOut}
                 >
                   LOGOUT

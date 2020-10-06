@@ -163,21 +163,47 @@ class UserRegister extends Component {
                   </div>
                 </div>
                 <div className="form-group ">
-                  <label htmlfor="address">Enter Address</label>
-                  <textarea
-                    rows="5"
-                    style={{ resize: "none" }}
-                    cols="10"
-                    className="form-control"
-                    id="address"
-                    name="address"
-                    onChange={this.handleChange}
-                    value={this.state.address}
-                  />
+                  <label htmlfor="telNo">Landline Number</label>
+                  <div className="input-group ">
+                    <input
+                      type="text"
+                      className="form-control "
+                      name="landlineNumber"
+                      id="telNo"
+                      onChange={this.handleChange}
+                      // value={}
+                    />
+                  </div>
+                </div>
+                <div className="form-group ">
+                  <label htmlfor="telNo">Whats App Number</label>
+                  <div className="input-group ">
+                    <input
+                      type="text"
+                      className="form-control "
+                      name="whatsappNumber"
+                      id="telNo"
+                      onChange={this.handleChange}
+                      // value={}
+                    />
+                  </div>
                 </div>
               </div>
 
               <div className="col-sm-6  col-lg-4">
+                <div className="form-group ">
+                  <label htmlfor="telNo">Passport Number</label>
+                  <div className="input-group ">
+                    <input
+                      type="text"
+                      className="form-control "
+                      name="passportNumber"
+                      id="telNo"
+                      onChange={this.handleChange}
+                      // value={}
+                    />
+                  </div>
+                </div>
                 <div className="form-group">
                   <label htmlFor="email"> Email</label>
                   <input
@@ -222,6 +248,9 @@ class UserRegister extends Component {
                     value={this.state.confirmPassword}
                   />
                 </div>
+              </div>
+
+              <div className="col-sm-6  col-lg-4 ">
                 <div className="form-group">
                   <label htmlFor="provinceName">Province.</label>
                   <select
@@ -450,6 +479,7 @@ class UserRegister extends Component {
                     )}
                   </select>
                 </div>
+
                 <div className="form-group">
                   <label htmlFor="town">Tehsil </label>
                   <select
@@ -2121,196 +2151,478 @@ class UserRegister extends Component {
                     )}
                   </select>
                 </div>
-              </div>
 
-              <div className="col-sm-6  col-lg-4 ">
-                <h2 className="text-center h3">PERMISSIONS</h2>
-                <div className="ml-5">
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      className="custom-control-input"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.cancreateAgent}
-                      name="cancreateAgent"
-                      checked={this.state.checked}
-                    />
-                    <label className="custom-control-label" htmlFor="create">
-                      Create an Agent
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canmodifyAgent}
-                      name="canmodifyAgent"
-                      className="custom-control-input"
-                      id="modify"
-                    />
-                    <label className="custom-control-label" htmlFor="modify">
-                      Mofify an agent{" "}
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canactivateAgent}
-                      name="canactivateAgent"
-                      className="custom-control-input"
-                      id="active"
-                    />
-                    <label className="custom-control-label" htmlFor="active">
-                      Activate an Agent{" "}
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.candeactivateAgent}
-                      name="candeactivateAgent"
-                      className="custom-control-input"
-                      id="deactivate"
-                    />
-                    <label
-                      className="custom-control-label"
-                      htmlFor="deactivate"
-                    >
-                      Deactivate an Agent
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.candeleteAgent}
-                      name="candeleteAgent"
-                      className="custom-control-input"
-                      id="delete"
-                    />
-                    <label className="custom-control-label" htmlFor="delete">
-                      Delete an Agent
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canviewAgentsDealHistory}
-                      name="canviewAgentsDealHistory"
-                      className="custom-control-input"
-                      id="details"
-                    />
-                    <label className="custom-control-label" htmlFor="details">
-                      View Agents Deals History{" "}
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canapproveGroup}
-                      name="canapproveGroup"
-                      className="custom-control-input"
-                      id="approve"
-                    />
-                    <label className="custom-control-label" htmlFor="approve">
-                      Approve a Group
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canrejectGroup}
-                      name="canrejectGroup"
-                      className="custom-control-input"
-                      id="reject"
-                    />
-                    <label className="custom-control-label" htmlFor="reject">
-                      Reject a Group
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canapproveDemand}
-                      name="canapproveDemand"
-                      className="custom-control-input"
-                      id="appdemand"
-                    />
-                    <label className="custom-control-label" htmlFor="appdemand">
-                      Approve a Demand
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canrejectDemand}
-                      name="canrejectDemand"
-                      className="custom-control-input"
-                      id="Regdemand"
-                    />
-                    <label className="custom-control-label" htmlFor="Regdemand">
-                      Reject a Demand
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canviewSubscriptions}
-                      name="canviewSubscriptions"
-                      className="custom-control-input"
-                      id="subs"
-                    />
-                    <label className="custom-control-label" htmlFor="subs">
-                      View Subscriptions
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.canfindGroup}
-                      name="canfindGroup"
-                      className="custom-control-input"
-                      id="group"
-                    />
-                    <label className="custom-control-label" htmlFor="group">
-                      Find a Group
-                    </label>
-                  </div>
-                  <div className="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      onClick={this.handleChecked}
-                      id="create"
-                      value={this.state.cancreatePayment}
-                      name="cancreatePayment"
-                      className="custom-control-input"
-                      id="payment"
-                    />
-                    <label className="custom-control-label" htmlFor="payment">
-                      Create Payment
-                    </label>
-                  </div>
+                <div className="form-group ">
+                  <label htmlfor="address">Enter Address</label>
+                  <textarea
+                    rows="5"
+                    style={{ resize: "none" }}
+                    cols="10"
+                    className="form-control"
+                    id="address"
+                    name="address"
+                    onChange={this.handleChange}
+                    value={this.state.address}
+                  />
+                </div>
+              </div>
+            </div>
+            <h2 className="text-center h3">PERMISSIONS</h2>
+            <div className="row ">
+              <div className="col-3">
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    className="custom-control-input"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreateAgent}
+                    name="cancreateAgent"
+                    checked={this.state.checked}
+                  />
+                  <label className="custom-control-label" htmlFor="create">
+                    Create Agent
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canmodifyAgent}
+                    name="canmodifyAgent"
+                    className="custom-control-input"
+                    id="modify"
+                  />
+                  <label className="custom-control-label" htmlFor="modify">
+                    Deactivate Agent{" "}
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canactivateAgent}
+                    name="canactivateAgent"
+                    className="custom-control-input"
+                    id="active"
+                  />
+                  <label className="custom-control-label" htmlFor="active">
+                    Verify Groups{" "}
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.candeactivateAgent}
+                    name="candeactivateAgent"
+                    className="custom-control-input"
+                    id="deactivate"
+                  />
+                  <label className="custom-control-label" htmlFor="deactivate">
+                    Edit Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.candeleteAgent}
+                    name="candeleteAgent"
+                    className="custom-control-input"
+                    id="delete"
+                  />
+                  <label className="custom-control-label" htmlFor="delete">
+                    Find Groups
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canviewAgentsDealHistory}
+                    name="canviewAgentsDealHistory"
+                    className="custom-control-input"
+                    id="details"
+                  />
+                  <label className="custom-control-label" htmlFor="details">
+                    View Req. Names{" "}
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canapproveGroup}
+                    name="canapproveGroup"
+                    className="custom-control-input"
+                    id="approve"
+                  />
+                  <label className="custom-control-label" htmlFor="approve">
+                    View Demands
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canrejectGroup}
+                    name="canrejectGroup"
+                    className="custom-control-input"
+                    id="reject"
+                  />
+                  <label className="custom-control-label" htmlFor="reject">
+                    Edit Content/Data
+                  </label>
+                </div>
+              </div>
+              <div className="col-3">
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canapproveDemand}
+                    name="canapproveDemand"
+                    className="custom-control-input"
+                    id="appdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="appdemand">
+                    Edit Agent Profile
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canrejectDemand}
+                    name="canrejectDemand"
+                    className="custom-control-input"
+                    id="Regdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="Regdemand">
+                    Delete Agent
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canviewSubscriptions}
+                    name="canviewSubscriptions"
+                    className="custom-control-input"
+                    id="subs"
+                  />
+                  <label className="custom-control-label" htmlFor="subs">
+                    Reject Groups
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Verify Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    Find Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    Verify Req. Name
+                  </label>
+                </div>{" "}
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    Transfer Demand
+                  </label>
+                </div>{" "}
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    View Agents Account
+                  </label>
+                </div>
+              </div>
+              <div className="col-3">
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canapproveDemand}
+                    name="canapproveDemand"
+                    className="custom-control-input"
+                    id="appdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="appdemand">
+                    Change Agent Password
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canrejectDemand}
+                    name="canrejectDemand"
+                    className="custom-control-input"
+                    id="Regdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="Regdemand">
+                    View Groups
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canviewSubscriptions}
+                    name="canviewSubscriptions"
+                    className="custom-control-input"
+                    id="subs"
+                  />
+                  <label className="custom-control-label" htmlFor="subs">
+                    Delete Groups
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Rejects Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Edit Subcriptions
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Reject Req. Name
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Edit Demands
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    View Deals
+                  </label>
+                </div>
+              </div>
+              <div className="col-3">
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canviewSubscriptions}
+                    name="canviewSubscriptions"
+                    className="custom-control-input"
+                    id="subs"
+                  />
+                  <label className="custom-control-label" htmlFor="subs">
+                    Activate Agent
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Edit Group
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    View Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canapproveDemand}
+                    name="canapproveDemand"
+                    className="custom-control-input"
+                    id="appdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="appdemand">
+                    Delete Tickets
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canrejectDemand}
+                    name="canrejectDemand"
+                    className="custom-control-input"
+                    id="Regdemand"
+                  />
+                  <label className="custom-control-label" htmlFor="Regdemand">
+                    View Subscriptions
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canviewSubscriptions}
+                    name="canviewSubscriptions"
+                    className="custom-control-input"
+                    id="subs"
+                  />
+                  <label className="custom-control-label" htmlFor="subs">
+                    Delete Req. Name
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.canfindGroup}
+                    name="canfindGroup"
+                    className="custom-control-input"
+                    id="group"
+                  />
+                  <label className="custom-control-label" htmlFor="group">
+                    Delete Demand
+                  </label>
+                </div>
+                <div className="custom-control custom-checkbox mb-3">
+                  <input
+                    type="checkbox"
+                    onClick={this.handleChecked}
+                    id="create"
+                    value={this.state.cancreatePayment}
+                    name="cancreatePayment"
+                    className="custom-control-input"
+                    id="payment"
+                  />
+                  <label className="custom-control-label" htmlFor="payment">
+                    View Agents
+                  </label>
                 </div>
               </div>
             </div>

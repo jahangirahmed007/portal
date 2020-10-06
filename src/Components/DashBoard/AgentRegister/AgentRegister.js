@@ -79,6 +79,16 @@ class AgentRegister extends Component {
 
         <div className="container">
           <form>
+            <div className="form-group  w-25 ">
+              <label htmlFor="agentId">Agent ID </label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={this.handleChange}
+                name="agentId"
+                id="agentId"
+              />
+            </div>
             <div className="row">
               <div className="col-sm-6  col-lg-4">
                 <div className="form-group">
@@ -109,6 +119,17 @@ class AgentRegister extends Component {
                     type="text"
                     onChange={this.handleChange}
                     value={this.state.cnicNumber}
+                    className="form-control"
+                    name="cnicNumber"
+                    id="CNIC"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="CNIC"> Passport Number</label>
+                  <input
+                    type="text"
+                    onChange={this.handleChange}
+                    value={this.state.passNumber}
                     className="form-control"
                     name="cnicNumber"
                     id="CNIC"
@@ -161,6 +182,16 @@ class AgentRegister extends Component {
               </div>
 
               <div className="col-sm-6  col-lg-4">
+                <div className="form-group ">
+                  <label htmlFor="address">Enter Address</label>
+                  <input
+                    className="form-control"
+                    style={{ height: "150px" }}
+                    type="file"
+                    name="logo"
+                    id=""
+                  />
+                </div>
                 <div className="form-group">
                   <label htmlFor="CompanyName">Company Full Name</label>
                   <input
@@ -195,24 +226,7 @@ class AgentRegister extends Component {
                   />
                 </div>
                 <div className="form-group ">
-                  <label htmlFor="telNo">Tel. Number</label>
-                  <div className="input-group ">
-                    <div className="input-group-prepend ">
-                      <div className="input-group-text">+92</div>
-                    </div>
-                    <input
-                      type="text"
-                      onChange={this.handleChange}
-                      value={this.state.TelNo}
-                      className="form-control "
-                      id="telNo"
-                      name="TelNo"
-                      placeholder="Tel No"
-                    />
-                  </div>
-                </div>
-                <div className="form-group ">
-                  <label htmlFor="mobNo">Mob. Number</label>
+                  <label htmlFor="telNo">Mob. Number</label>
                   <div className="input-group ">
                     <div className="input-group-prepend ">
                       <div className="input-group-text">+92</div>
@@ -221,12 +235,45 @@ class AgentRegister extends Component {
                       type="text"
                       onChange={this.handleChange}
                       value={this.state.mobNumber}
+                      className="form-control "
+                      id="telNo"
+                      name="TelNo"
+                      placeholder="Tel No"
+                    />
+                  </div>
+                </div>
+                <div className="form-group ">
+                  <label htmlFor="mobNo">Whatsapp Number</label>
+                  <div className="input-group ">
+                    <div className="input-group-prepend ">
+                      <div className="input-group-text">+92</div>
+                    </div>
+                    <input
+                      type="text"
+                      onChange={this.handleChange}
+                      value={this.state.whatsappNumber}
                       name="mobNumber"
                       className="form-control "
                       id="mobNo"
                     />
                   </div>
                 </div>
+                <div className="form-group ">
+                  <label htmlFor="mobNo">Landline Number</label>
+                  <div className="input-group ">
+                    <input
+                      type="text"
+                      onChange={this.handleChange}
+                      value={this.state.telNo}
+                      name="mobNumber"
+                      className="form-control "
+                      id="mobNo"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-6  col-lg-4">
                 <div className="form-group ">
                   <label htmlFor="address">Enter Address</label>
                   <textarea
@@ -240,9 +287,6 @@ class AgentRegister extends Component {
                     name="address"
                   />
                 </div>
-              </div>
-
-              <div className="col-sm-6  col-lg-4">
                 <div className="form-group">
                   <label htmlFor="provinceName">Province.</label>
                   <select
