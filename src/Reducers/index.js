@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import AuthReducer from './AuthReducer';
-import AgentReducer from './AgentRegisterReducer';
+import { combineReducers } from "redux";
+import AuthReducer from "./AuthReducer";
+import ErrorReducer from "./ErrorReducer";
 
 export default combineReducers({
-    Auth: AuthReducer,
-    AgentRegister: AgentReducer
-})
+  Auth: AuthReducer,
+  Errors: ErrorReducer,
+});

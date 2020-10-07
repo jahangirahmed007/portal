@@ -2,12 +2,20 @@ import axios from "axios";
 import setAuthToken from "../services/SetAuthToken";
 import url from "../constants/constants";
 export const loginUser = (user, history) => (dispatch) => {
-  axios.post(`${url}/portal-fare/login`, user).then((res) => {
-    const { token } = res.data;
-    localStorage.setItem("jwtToken", token);
-    setAuthToken(token);
-    dispatch(getCurrentUser());
-  });
+  axios
+    .post(`${url}/portal-fare/login`, user)
+    .then((res) => {
+      const { token } = res.data;
+      localStorage.setItem("jwtToken", token);
+      setAuthToken(token);
+      dispatch(getCurrentUser());
+    })
+    .catch((err) => {
+      dispatch({
+        type: "GET_ERRORS",
+        payload: err.response.data,
+      });
+    });
 };
 
 export const getCurrentUser = () => (dispatch) => {
@@ -15,6 +23,12 @@ export const getCurrentUser = () => (dispatch) => {
     dispatch({
       type: "SET_CURRENT_USER",
       payload: res.data,
+      // }).catch((err) => {
+      //   // console.log(err.response.data);
+      //   dispatch({
+      //     type: "GET_ERRORS",
+      //     payload: err,
+      //   });
     });
   });
 };

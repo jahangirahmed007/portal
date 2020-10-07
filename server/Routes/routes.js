@@ -156,7 +156,7 @@ router.post("/admin/register", (req, res) => {
     type: "admin",
   });
   bcrypt.hash(userAdmin.password, 10, (err, hash) => {
-    if (err) console.error("Error" + err);
+    if (err) res.send(err);
     else {
       userAdmin.password = hash;
       const added = userAdmin.save();

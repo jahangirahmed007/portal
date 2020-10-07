@@ -5,6 +5,9 @@ class LoginAdmin extends Component {
   state = {
     username: "",
     password: "",
+    loader: false,
+    errors: "",
+    showPassword: false,
   };
   handleChange = (e) => {
     this.setState({
@@ -25,6 +28,7 @@ class LoginAdmin extends Component {
     }
   }
   UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log(nextProps, "next props");
     if (
       nextProps.auth.isAuthenticated === true &&
       nextProps.auth.user.type === "admin"
@@ -36,9 +40,10 @@ class LoginAdmin extends Component {
     ) {
       this.props.history.push("/agentdash");
     }
-    if (nextProps.errors) {
+    if (nextProps.errors.data) {
       this.setState({
-        errors: nextProps.errors,
+        errors: nextProps.errors.data,
+        loader: false,
       });
     }
   }
@@ -51,10 +56,24 @@ class LoginAdmin extends Component {
     };
     console.log(user);
     this.props.loginUser(user);
+    // if (this.props.erorr.Errors) {
+    //   this.setState({
+    //     loader: false,
+    //   });
+    // }
+    this.setState({
+      loader: true,
+      errors: "",
+    });
   };
 
+  togglePassword = () => {
+    this.setState({
+      showPassword: !this.state.showPassword,
+    });
+  };
   render() {
-    console.log(this.props.auth);
+    let err = this.state.errors;
     return (
       <div className=" bg-light p-4 d-flex justify-content-center">
         <div
@@ -67,7 +86,7 @@ class LoginAdmin extends Component {
         >
           <h3 className="text-white mb-3"> LOGIN </h3>
 
-          <form>
+          <form className="">
             <div className="form-group">
               <label className="text-white" htmlFor="username">
                 USERNAME
@@ -75,14 +94,56 @@ class LoginAdmin extends Component {
               <input
                 type="text"
                 value={this.state.username}
-                className="form-control "
+                className="   form-control"
                 onChange={this.handleChange}
                 id="username"
                 name="username"
                 style={{ backgroundColor: "transparent", color: "white" }}
               />
+
+              <div className=" text-white">
+                <b>{err.username}</b>{" "}
+              </div>
             </div>
-            <div className="form-group">
+            <div className="form-group  ">
+              <label className="text-white" htmlFor="password">
+                PASSWORD
+              </label>
+              <div className="input-group">
+                <input
+                  type={this.state.showPassword ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  className="form-control "
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  style={{ backgroundColor: "transparent", color: "white" }}
+                />
+                <div class="input-group-append">
+                  {this.state.showPassword ? (
+                    <apan
+                      className="input-group-text"
+                      onClick={this.togglePassword}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Hide
+                    </apan>
+                  ) : (
+                    <apan
+                      className="input-group-text"
+                      onClick={this.togglePassword}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Show
+                    </apan>
+                  )}
+                </div>
+              </div>
+              <div className=" text-white d-block">
+                <b>{err.password}</b>{" "}
+              </div>
+            </div>
+            {/* <div className="form-group">
               <label className="text-white" htmlFor="password">
                 PASSWORD
               </label>
@@ -95,14 +156,26 @@ class LoginAdmin extends Component {
                 className="form-control "
                 style={{ backgroundColor: "transparent", color: "white" }}
               />
-            </div>
+              <div class="input-group-append">
+                {this.state.hidden_one ? (
+                  <apan className="input-group-text">Hide</apan>
+                ) : (
+                  <apan className="input-group-text">Show</apan>
+                )}
+              </div>
+              <div className=" text-white">
+                <b>{err.password}</b>{" "}
+              </div>
+            </div> */}
             <div className="d-flex justify-content-center">
               <button
+                type="submit"
                 className="btn bg-white px-3 mt-2"
                 style={{ color: "purple", fontWeight: "bold" }}
                 onClick={this.handleSubmit}
+                disabled={this.state.loader}
               >
-                Login
+                {this.state.loader ? "Loading" : "Login"}
               </button>
             </div>
           </form>
@@ -113,6 +186,7 @@ class LoginAdmin extends Component {
 }
 const mapStateToProps = (state) => ({
   auth: state.Auth,
+  errors: state.Errors,
 });
 
 export default connect(mapStateToProps, { loginUser })(LoginAdmin);

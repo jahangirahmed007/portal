@@ -4,17 +4,22 @@ import { withRouter } from "react-router-dom";
 import { logOut } from "../../Actions/index";
 import { Route, Switch } from "react-router-dom";
 import AdminDashSideBar from "../AdminDashSideBar/AdminDashSideBar";
-import ChangePassword from "./ChangePassword/ChangePassword";
-import AllDeals from "./AllDeals/AllDeals";
-import ViewUsers from "./ViewUsers/ViewUsers";
-import ActionsOfUser from "./ActionsOfUsers/ActionsOfUser";
-import AllAgents from "./AllAgents/AllAgents";
-import AgentSubs from "./AgentSubs/AgentSubs";
-import EditSubs from "./EditSubs/EditSubs";
+
+const AllDeals = React.lazy(() => import("./AllDeals/AllDeals"));
+const ViewUsers = React.lazy(() => import("./ViewUsers/ViewUsers"));
+const ActionsOfUser = React.lazy(() =>
+  import("./ActionsOfUsers/ActionsOfUser")
+);
+const AllAgents = React.lazy(() => import("./AllAgents/AllAgents"));
+const AgentSubs = React.lazy(() => import("./AgentSubs/AgentSubs"));
+const EditSubs = React.lazy(() => import("./EditSubs/EditSubs"));
 const UserRegister = React.lazy(() => import("./UserRegister/UserRegister"));
 const DashWelcome = React.lazy(() => import("../DashWelcome/DashWelcome"));
 const MainLoader = React.lazy(() => import("../Loader/Loader"));
 const AgentRegister = React.lazy(() => import("./AgentRegister/AgentRegister"));
+const ChangePassword = React.lazy(() =>
+  import("./ChangePassword/ChangePassword")
+);
 class DashBoard extends Component {
   render() {
     if (this.props.auth.user.type !== "admin") {
