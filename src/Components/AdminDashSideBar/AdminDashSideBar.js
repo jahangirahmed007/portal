@@ -196,10 +196,6 @@ class AdminDashSideBar extends Component {
                             AGENTS SUBSCRIPTIONS
                           </Link>
                         </li>
-                        {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
-                    <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>
-                    <li className="text-white mb-2">VIEW DEMANDS</li>
-                    <li className="text-white mb-2">VIEW AGENTS</li> */}
                       </ul>
                     </div>
                   </div>
@@ -236,13 +232,28 @@ class AdminDashSideBar extends Component {
                         <li className="">
                           <Link
                             className="text-white mb-2"
-                            // to="/admindash/createagent"
+                            to="/admindash/groups"
                           >
                             GROUP/TICKETS
                           </Link>{" "}
                         </li>
-                        <li className="text-white mb-2">DEMANDS</li>
-                        <li className="text-white mb-2">REQUIRE NAMES</li>
+                        <li>
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/demands"
+                          >
+                            DEMANDS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/admindash/reqiurenames"
+                            className="text-white mb-2"
+                          >
+                            {" "}
+                            REQUIRE NAMES
+                          </Link>{" "}
+                        </li>
                         {/* <li className="text-white mb-2">AGRNTS SUBSCRIPTIONS</li> */}
                         {/* <li className="text-white mb-2">VIEW DEALS OF AGENTS</li>
                     <li className="text-white mb-2">VIEW SUBSCRIPTIONS</li>

@@ -4,6 +4,9 @@ import { withRouter } from "react-router-dom";
 import { logOut } from "../../Actions/index";
 import { Route, Switch } from "react-router-dom";
 import AdminDashSideBar from "../AdminDashSideBar/AdminDashSideBar";
+const RequireNames = React.lazy(() => import("./RequireNames/RequireNames"));
+const Demands = React.lazy(() => import("./Demands/Demands"));
+const GroupTickets = React.lazy(() => import("./GroupsTickets/GroupTickets"));
 
 const AllDeals = React.lazy(() => import("./AllDeals/AllDeals"));
 const ViewUsers = React.lazy(() => import("./ViewUsers/ViewUsers"));
@@ -51,6 +54,12 @@ class DashBoard extends Component {
                 <Route path="/admindash/allagents" component={AllAgents} />
                 <Route path="/admindash/agentssubs" component={AgentSubs} />
                 <Route path="/admindash/viewsubs" component={EditSubs} />
+                <Route path="/admindash/groups" component={GroupTickets} />
+                <Route path="/admindash/demands" component={Demands} />
+                <Route
+                  path="/admindash/reqiurenames"
+                  component={RequireNames}
+                />
               </Switch>
             </Suspense>
           </div>
