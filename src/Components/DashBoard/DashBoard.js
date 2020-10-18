@@ -4,6 +4,14 @@ import { withRouter } from "react-router-dom";
 import { logOut } from "../../Actions/index";
 import { Route, Switch } from "react-router-dom";
 import AdminDashSideBar from "../AdminDashSideBar/AdminDashSideBar";
+const FindTicket =React.lazy(()=>import("./FindTicket/FindTicket")) ;
+const FindGroup =React.lazy(()=>import("./FindGroup/FindGroup")) ;
+const RequiredName =React.lazy(()=>import("./RequiredName/RequiredName")) ;
+const CreateDemand =React.lazy(()=>import("./CreateDemand/CreateDemand")) ;
+const uploadGroups =React.lazy(()=>import("./uploadGroups/uploadGroups")) ;
+const uploadTickets =React.lazy(()=>import("./uploadTickets/uploadTickets")) ;
+const UserForm = React.lazy(() => import("./UserForm/UserForm"));
+const AgentForm = React.lazy(() => import("./AgentForm/AgentForm"));
 const RequireNames = React.lazy(() => import("./RequireNames/RequireNames"));
 const Demands = React.lazy(() => import("./Demands/Demands"));
 const GroupTickets = React.lazy(() => import("./GroupsTickets/GroupTickets"));
@@ -60,6 +68,22 @@ class DashBoard extends Component {
                   path="/admindash/reqiurenames"
                   component={RequireNames}
                 />
+                <Route path="/admindash/agentfrom" component={AgentForm} />
+                
+                <Route path="/admindash/userform" component={UserForm} />
+                <Route path="/admindash/groupsupload" component={uploadGroups} />
+                <Route path="/admindash/ticketsupload" component={uploadTickets} />
+                <Route path="/admindash/createdemand" component={CreateDemand} />
+                <Route path="/admindash/requiredname" component={RequiredName} />
+                <Route path="/admindash/findgroup" component={FindGroup} />
+                <Route path="/admindash/findticket" component={FindTicket} />
+
+
+
+
+
+
+
               </Switch>
             </Suspense>
           </div>

@@ -295,20 +295,33 @@ class AdminDashSideBar extends Component {
                         <li className="">
                           <Link
                             className="text-white mb-2"
-                            // to="/admindash/createagent"
+                            to="/admindash/ticketsupload"
                           >
                             UPLOAD TICKETS
                           </Link>{" "}
                         </li>
-                        <li className="text-white mb-2">FIND TICKETS</li>
-                        <li className="text-white mb-2">CREATE DEMANED</li>
-                        <li className="text-white mb-2">UPLOAD GROUPS</li>
-                        <li className="text-white mb-2">FIND GROUPS</li>
-                        <li className="text-white mb-2">REQUIRED NAME</li>
-                        <li className="text-white mb-2">
-                          AGENTS CREATION FORM{" "}
+                        <li > <Link  className="text-white mb-2" to="/admindash/findticket">FIND TICKETS</Link></li>
+                        <li ><Link className="text-white mb-2" to="/admindash/createdemand"> CREATE DEMANED</Link> </li>
+                        <li > <Link className="text-white mb-2" to="/admindash/groupsupload">UPLOAD GROUPS</Link> </li>
+                        <li ><Link className="text-white mb-2" to="/admindash/findgroup">FIND GROUPS</Link> </li>
+                        <li ><Link className="text-white mb-2" to="/admindash/requiredname"> REQUIRED NAME</Link></li>
+                        <li>
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/agentfrom"
+                          >
+                            {" "}
+                            AGENTS CREATION FORM
+                          </Link>
                         </li>
-                        <li className="text-white mb-2">USERS CREATION FROM</li>
+                        <li>
+                          <Link
+                            className="text-white mb-2"
+                            to="/admindash/userform"
+                          >
+                            USERS CREATION FROM
+                          </Link>
+                        </li>
                       </ul>
                     </div>
                   </div>
